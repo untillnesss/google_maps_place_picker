@@ -415,9 +415,9 @@ class _PlacePickerState extends State<PlacePicker> {
           Timer(Duration(seconds: widget.myLocationButtonCooldown), () {
             provider!.isOnUpdateLocationCooldown = false;
           });
-          await provider!.updateCurrentLocation(widget.forceAndroidLocationManager);
-          await _moveToCurrentPosition();
         }
+        await provider!.updateCurrentLocation(widget.forceAndroidLocationManager);
+        await _moveToCurrentPosition();
       },
       onMoveStart: () {
         searchBarController.reset();
